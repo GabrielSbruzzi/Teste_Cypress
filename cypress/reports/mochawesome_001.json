@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-31T11:41:14.988Z",
+    "end": "2024-12-31T11:41:23.192Z",
+    "duration": 8204,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8e7be2c0-1764-4be2-a820-71d5085a4488",
+      "title": "",
+      "fullFile": "cypress\\integration\\cart.spec.js",
+      "file": "cypress\\integration\\cart.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f58f523d-54c2-4860-9984-8e9eec369e9b",
+          "title": "Shopping Cart Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve adicionar produtos ao carrinho e verificar quantidade",
+              "fullTitle": "Shopping Cart Tests Deve adicionar produtos ao carrinho e verificar quantidade",
+              "timedOut": null,
+              "duration": 2663,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.inventory_item').first().find('button').click();\ncy.get('.shopping_cart_badge').should('have.text', '1');\ncy.get('.shopping_cart_link').click();\ncy.get('.cart_item').first().find('.cart_quantity').should('have.text', '1');",
+              "err": {},
+              "uuid": "760bbbb2-00bd-495d-8425-955c90306aa3",
+              "parentUUID": "f58f523d-54c2-4860-9984-8e9eec369e9b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve adicionar múltiplos produtos ao carrinho e verificar total",
+              "fullTitle": "Shopping Cart Tests Deve adicionar múltiplos produtos ao carrinho e verificar total",
+              "timedOut": null,
+              "duration": 1409,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.inventory_item').eq(0).find('button').click();\ncy.get('.inventory_item').eq(1).find('button').click();\ncy.get('.shopping_cart_badge').should('have.text', '2');\ncy.get('.shopping_cart_link').click();\ncy.get('.cart_item').should('have.length', 2);",
+              "err": {},
+              "uuid": "d58ebe12-0da1-4fc0-b2f4-ebfde119034f",
+              "parentUUID": "f58f523d-54c2-4860-9984-8e9eec369e9b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve remover produtos do carrinho e verificar que está vazio",
+              "fullTitle": "Shopping Cart Tests Deve remover produtos do carrinho e verificar que está vazio",
+              "timedOut": null,
+              "duration": 1320,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.inventory_item').first().find('button').click();\ncy.get('.shopping_cart_link').click();\ncy.get('.cart_item').first().find('.cart_button').click();\ncy.get('.cart_item').should('not.exist');",
+              "err": {},
+              "uuid": "43041b3b-9640-48c5-8801-007255b501be",
+              "parentUUID": "f58f523d-54c2-4860-9984-8e9eec369e9b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve verificar o total do carrinho com 1 produto",
+              "fullTitle": "Shopping Cart Tests Deve verificar o total do carrinho com 1 produto",
+              "timedOut": null,
+              "duration": 1250,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.inventory_item').first().find('button').click();\ncy.get('.shopping_cart_link').click();\ncy.get('.cart_item').first().find('.cart_quantity').should('have.text', '1');",
+              "err": {},
+              "uuid": "711132d3-489a-475e-905f-122fb9e57aed",
+              "parentUUID": "f58f523d-54c2-4860-9984-8e9eec369e9b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve verificar o total do carrinho com múltiplos produtos",
+              "fullTitle": "Shopping Cart Tests Deve verificar o total do carrinho com múltiplos produtos",
+              "timedOut": null,
+              "duration": 1329,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.inventory_item').eq(0).find('button').click();\ncy.get('.inventory_item').eq(1).find('button').click();\ncy.get('.shopping_cart_link').click();\ncy.get('.cart_item').should('have.length', 2);",
+              "err": {},
+              "uuid": "81779318-8a75-4893-8503-c3bd01f95b67",
+              "parentUUID": "f58f523d-54c2-4860-9984-8e9eec369e9b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "760bbbb2-00bd-495d-8425-955c90306aa3",
+            "d58ebe12-0da1-4fc0-b2f4-ebfde119034f",
+            "43041b3b-9640-48c5-8801-007255b501be",
+            "711132d3-489a-475e-905f-122fb9e57aed",
+            "81779318-8a75-4893-8503-c3bd01f95b67"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7971,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
