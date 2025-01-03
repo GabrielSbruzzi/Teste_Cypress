@@ -97,9 +97,3 @@ npx cypress run
 ### 4. **Configuração do Pipeline CI/CD**
 
 Se desejar configurar o pipeline no **GitLab**, adicione o arquivo `.gitlab-ci.yml` ao repositório com as configurações para execução dos testes e geração de relatórios. Não se esqueça de incluir notificações de falha.
-
----
-
-## 📜 Licença
-
-Este projeto é licenciado sob a **MIT License**. Para mais detalhes, veja o arquivo [LICENSE](LICENSE).
